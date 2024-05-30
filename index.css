@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav {
+    height: 6rem;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-right: 3rem;
+}
+
+li {
+    position: relative;
+    cursor: pointer;
+}
+
+li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.logo {
+    margin-left: 5rem;
+    font-size: 3rem;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+}
+
+.menu {
+    margin-right: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.menubtn {
+    height: 30px;
+    width: 30px;
+}
+
+main {
+    z-index: 1;
+}
+
+.page1 {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.left1,
+.right1 {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.sleft1 {
+    font-size: 25px;
+}
+
+.right1 {
+    font-size: 1rem;
+}
+
+.boton-elegante {
+    padding: 15px 30px;
+    border: 2px solid #2c2c2c;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.boton-elegante::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.25) 0%,
+            rgba(255, 255, 255, 0) 70%);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+.boton-elegante:hover::after {
+    transform: scale(4);
+}
+
+.boton-elegante:hover {
+    border-color: #666666;
+    background: #292929;
+}
+
+.page2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.page2_1,
+.page2_2,
+.page2_3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center
+}
+
+.page2_1 {
+    margin-top: 2rem;
+}
+
+.card {
+    width: 90%;
+    height: 100%;
+    padding: 25px;
+}
+
+.cardtitle {
+    font-size: 25px;
+    color: red;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bottom {
+    padding-left: 35px;
+    margin-top: 10px;
+    color: rgb(108, 108, 108);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.move {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.framses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 45px;
+    width: 50%;
+    height: 90%;
+}
+
+iframe {
+    height: 215px;
+    width: 460px;
+}
+
+footer {
+    height: 18rem;
+    background-color: black;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.f1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.fcard {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 20px;
+}
+
+.fcardtxt {
+    position: relative;
+    cursor: pointer;
+}
+
+.fcardtxt::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.fcardtxt:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.f2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.lord {
+    height: 30px;
+    width: 30px;
+}
+
+.gitcontainer {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gitBtn {
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .4s;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(31, 31, 31);
+    overflow: hidden;
+}
+
+.svgIcon {
+    transition-duration: .3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    width: 120px;
+    font-weight: 600;
+    opacity: 0;
+    transition-duration: .4s;
+}
+
+.gitBtn:hover {
+    width: 110px;
+    transition-duration: .4s;
+    border-radius: 30px;
+}
+
+.gitBtn:hover .text {
+    opacity: 1;
+    transition-duration: .4s;
+}
+
+.gitBtn:hover .svgIcon {
+    opacity: 0;
+    transition-duration: .3s;
+}
+
+.xBtn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    /* overflow: hidden; */
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 3;
+}
+
+.svgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.xBG {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #212121;
+    z-index: -1;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.xBtn:hover .xBG {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+}
+
+.xBtn:hover .svgContainer {
+    background-color: rgba(156, 156, 156, 0.466);
+    backdrop-filter: blur(4px);
+}
+
+
+.f4 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+a {
+    color: white;
+}
+
+@media (max-width : 768px) {
+    ul {
+        display: none;
+    }
+
+    .menu {
+        display: block
+    }
+
+    .page1 {
+        flex-direction: column;
+    }
+
+    .left1,
+    .right1 {
+        height: 50%;
+        width: 100%;
+    }
+
+    .cardtitle {
+        font-size: 15px;
+    }
+
+    .bottom {
+        font-size: 12px;
+    }
+
+    iframe {
+        height: 165px;
+        width: 360px;
+    }
+}
+
+@media (max-width : 426px) {
+    .logo {
+        margin-left: 1rem;
+    }
+
+    .menu {
+        margin-right: 1rem;
+    }
+
+    .right1 {
+        font-size: 10px;
+    }
+
+    .page2_1,
+    .page2_2,
+    .page2_3 {
+        flex-direction: column;
+    }
+
+    .card {
+        height: 50%;
+        width: 95%;
+    }
+
+    .framses {
+        flex-direction: column;
+        height: 35rem;
+    }
+
+    .frame {
+        width: 100%;
+        height: 50%;
+    }
+
+    .fcardtxt {
+        font-size: 12px;
+    }
+
+    .mailtxt {
+        font-size: 10px;
+    }
+
+    .lord {
+        height: 20px;
+        width: 20px;
+    }
+
+    .gitbrn {
+        width: 20px;
+        height: 20px;
+    }
+
+    .gitBtn:hover {
+        width: 80px;
+        transition-duration: .4s;
+        border-radius: 30px;
+    }
+
+    .gitcontainer {
+        width: 85px;
+    }
+}
+
+@media (max-width : 376px) {
+    .fcardtxt {
+        font-size: 8px;
+    }
+
+    .ow2 {
+        height: 40px;
+        width: 60px;
+    }
+}
+
+@media (max-width : 321px) {
+    .sleft1 {
+        font-size: 20px;
+    }
+
+    .right1 {
+        font-size: 8px;
+    }
+
+    .bottom {
+        font-size: 10px;
+    }
+
+    iframe {
+        height: 140px;
+        width: 300px;
+    }
+}
